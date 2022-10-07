@@ -16,5 +16,7 @@ public class Direccion {
 	 String municipio;
 	 @Column(length = 30)
 	 String provincia;
-	//LECCION 3
+	 @Embedded
+	 Direccion direccion;
+	//LECCION 4
 }

@@ -27,4 +27,5 @@ public class TuPrimeraEntidad extends Identifiable {
 	BigDecimal importe;
 	
 	
+	
 }
