@@ -18,4 +18,6 @@ public class Categoria {
 	 String oid;
 	 @Column(length=50)
 	 String descripcion;
+	 
+	 //LECCION 3
 }

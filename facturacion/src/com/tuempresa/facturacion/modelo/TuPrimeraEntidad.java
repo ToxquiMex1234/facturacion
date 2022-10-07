@@ -7,6 +7,7 @@ import javax.persistence.*;
 
 import org.openxava.annotations.*;
 import org.openxava.model.*;
+
 import lombok.*;
 
 /**
@@ -24,5 +25,6 @@ public class TuPrimeraEntidad extends Identifiable {
 	LocalDate fecha;
 	
 	BigDecimal importe;
+	
 	
 }

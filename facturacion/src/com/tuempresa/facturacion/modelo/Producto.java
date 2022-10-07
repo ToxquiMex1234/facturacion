@@ -31,4 +31,6 @@ public class Producto {
 	 String fotos;
 	 @TextArea // Esto es para un texto grande, se usará un área de texto o equivalente
 	 String observaciones;
+	 //LECCION 3
+	 
 }
