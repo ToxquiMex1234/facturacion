@@ -22,5 +22,4 @@ implements ICalculator{
 		return ultimoNumero == null ? 1 : ultimoNumero +1;
 	}
 	
-
 }
