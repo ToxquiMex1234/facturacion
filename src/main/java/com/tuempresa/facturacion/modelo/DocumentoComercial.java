@@ -16,10 +16,11 @@ import lombok.*;
 @Getter @Setter
 @View(members = 
 		"anyo, numero, fecha;"+
+        "datos{"+
 		"cliente;"+
 		"detalles;"+
-		"observaciones"
-		)
+		"observaciones"+
+		"}")
 abstract public class DocumentoComercial extends Identificable{
 	
 	@DefaultValueCalculator(CurrentYearCalculator.class)
@@ -40,7 +41,7 @@ abstract public class DocumentoComercial extends Identificable{
 	Cliente cliente;
 	
 	@ElementCollection
-	@ListProperties("producto.numero, producto.descripcion, cantidad")
+	@ListProperties("producto.numero, producto.descripcion, cantidad, precioPorUnidad,  importe")
 	Collection<Detalle> detalles;
 	
 	@Stereotype("MEMO")
