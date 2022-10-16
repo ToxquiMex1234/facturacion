@@ -9,7 +9,7 @@ import lombok.*;
 
 public class CalculadorSiguienteNumeroParaAnyo 
 implements ICalculator{
-
+	
 	@Getter @Setter
 	int anyo;
 	
