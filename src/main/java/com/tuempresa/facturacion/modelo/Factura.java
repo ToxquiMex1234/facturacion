@@ -21,5 +21,4 @@ public class Factura extends DocumentoComercial{
 	@CollectionView("SinClienteNiFactura")
 	Collection<Pedido> pedidos;
 	
-
 }

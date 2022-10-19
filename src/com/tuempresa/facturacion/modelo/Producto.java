@@ -7,32 +7,34 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 
 import lombok.*;
-@Entity @Getter @Setter
-public class Producto {
 
-	@Id @Column(length=9)
-	int numero;
+@Entity
+@Getter @Setter
+public class Producto {
+@Id 
+@Column(length=9)
+int numero;
+
+@Column(length=50)
+String descripcion;
+
+@ManyToOne(
+		fetch=FetchType.LAZY,
+        optional=true)
+@DescriptionsList
+Categoria categoria;
+
+@Money
+BigDecimal precio;
 	
-	@Column(length=50) @Required
-	String descrpcion;
-	 
-	@ManyToOne(fetch=FetchType.LAZY, optional=true) 
-    @DescriptionsList 
-	Categoria categoria;
-	 
-	@Stereotype("DINERO")
-	BigDecimal precio;
-	
-    @Stereotype("GALERIA_IMAGENES") 
-	@Column(length=32)
-	String fotos;
-    
-    @Stereotype("TEXTO_GRANDE")
-	String obsevaciones;
-    
-    @ManyToOne(fetch=FetchType.LAZY)
-    @DescriptionsList
-    Autor autor;
-	 //LECCION 5
-	 
+@Files
+@Column(length=32)
+String fotos;
+
+@TextArea
+String observaciones;
+
+@ManyToOne
+@DescriptionsList
+Autor autor;
 }

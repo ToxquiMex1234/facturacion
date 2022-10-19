@@ -20,7 +20,6 @@ public class Cliente {
 	
 	@Embedded
 	Direccion direccion;
-	
-	
+		
 
 }

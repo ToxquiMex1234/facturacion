@@ -13,5 +13,6 @@ public class Incidencia {
 	
 	public int getImporte() {
 		return cantidad * precio;
+		
 	}
 }

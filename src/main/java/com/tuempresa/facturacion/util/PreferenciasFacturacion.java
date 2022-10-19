@@ -1,10 +1,12 @@
 package com.tuempresa.facturacion.util;
 
+import java.io.*;
 import java.math.*;
 import java.util.*;
 
 import org.apache.commons.logging.*;
 import org.openxava.util.*;
+
 
 public class PreferenciasFacturacion {
 
@@ -18,12 +20,12 @@ public class PreferenciasFacturacion {
 			PropertiesReader reader =
 					new PropertiesReader(
 							PreferenciasFacturacion.class, ARCHIVO_PROPIEDADES);
-			try {
+			try { 
 				propiedades = reader.get();
-			} catch (Exception ex) {
+			} catch (IOException ex) {
 				log.error(
 						XavaResources.getString(
-								"properties_file_error",
+							"properties_file_error",
 								ARCHIVO_PROPIEDADES),
 						ex);
 				propiedades = new Properties();

@@ -24,7 +24,7 @@ public class Detalle {
 	public BigDecimal getImporte() {
 		if(precioPorUnidad == null )return BigDecimal.ZERO;
 		return new BigDecimal(cantidad).multiply(precioPorUnidad);
-		
+	
 	}
 	@DefaultValueCalculator(value = CalculadorPrecioPorUnidad.class, 
 				properties = @PropertyValue(name = "numeroProducto",from = "producto.numero")

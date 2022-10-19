@@ -9,5 +9,4 @@ public class Propiedad {
 int cantidad;
 
 
-
 }

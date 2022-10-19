@@ -18,5 +18,6 @@ public class CalculadorPrecioPorUnidad implements ICalculator{
 	Producto producto = getManager()
 			.find(Producto.class, numeroProducto);
 		    return producto.getPrecio();
+		    
 	}
 }

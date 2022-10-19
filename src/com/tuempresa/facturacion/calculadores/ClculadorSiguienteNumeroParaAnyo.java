@@ -19,7 +19,7 @@ public class ClculadorSiguienteNumeroParaAnyo
          Integer ultimoNumero=(Integer) query.getSingleResult();
          return ultimoNumero == null ? 1 : ultimoNumero + 1;
        
-        //leccion 5
+        
 			
 		}
 	}

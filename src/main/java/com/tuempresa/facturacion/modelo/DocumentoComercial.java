@@ -11,8 +11,6 @@ import org.openxava.annotations.*;
 import org.openxava.calculators.*;
 import org.openxava.jpa.*;
 
-import com.tuempresa.facturacion.calculadores.*;
-
 import lombok.*;
 
 @Entity
@@ -31,8 +29,9 @@ abstract public class DocumentoComercial extends Identificable{
 	int anyo;
 	
 	@Column(length=6)
-	@DefaultValueCalculator(value=CalculadorSiguienteNumeroParaAnyo.class,
-	properties=@PropertyValue(name="anyo"))
+	//@DefaultValueCalculator(value=CalculadorSiguienteNumeroParaAnyo.class,
+	//properties=@PropertyValue(name="anyo"))
+	@ReadOnly
 	int numero;
 	
 	@Required

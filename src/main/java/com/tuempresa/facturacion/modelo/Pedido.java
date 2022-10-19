@@ -18,6 +18,6 @@ public class Pedido extends DocumentoComercial{
 	@ManyToOne
 	@ReferenceView("SinClienteNiPedidos")
 	Factura factura;
-	
+
 
 }

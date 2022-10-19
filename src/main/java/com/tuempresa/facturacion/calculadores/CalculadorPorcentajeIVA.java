@@ -8,7 +8,8 @@ public class CalculadorPorcentajeIVA implements ICalculator{
 
 	@Override
 	public Object calculate() throws Exception {
-	return PreferenciasFacturacion.getPorcentajeIVADefecto();	
+	return PreferenciasFacturacion.getPorcentajeIVADefecto();
+	
 	
 	}
 }

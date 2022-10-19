@@ -1,0 +1,192 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 65011712 bytes for Failed to commit area from 0x00000000c2a00000 to 0x00000000c6800000 of length 65011712.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3269), pid=9868, tid=14436
+#
+# JRE version:  (11.0.2+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.2+9, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=Cp1252 _run._Run_facturacion
+
+Host: Intel(R) Celeron(R) N4000 CPU @ 1.10GHz, 2 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+Time: Tue Oct 18 12:21:05 2022 Hora estándar del Este (México) elapsed time: 1 seconds (0d 0h 0m 1s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000022e5b7f0800):  JavaThread "Unknown thread" [_thread_in_vm, id=14436, stack(0x00000044ac600000,0x00000044ac700000)]
+
+Stack: [0x00000044ac600000,0x00000044ac700000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x63489a]
+V  [jvm.dll+0x771f9f]
+V  [jvm.dll+0x773648]
+V  [jvm.dll+0x773d03]
+V  [jvm.dll+0x25eba8]
+V  [jvm.dll+0x631d3a]
+V  [jvm.dll+0x626775]
+V  [jvm.dll+0x313ffc]
+V  [jvm.dll+0x313e82]
+V  [jvm.dll+0x3196e6]
+V  [jvm.dll+0x36579f]
+V  [jvm.dll+0x3651c0]
+V  [jvm.dll+0x2f0ff8]
+V  [jvm.dll+0x2f2156]
+V  [jvm.dll+0x74b4f7]
+V  [jvm.dll+0x74cc3f]
+V  [jvm.dll+0x372609]
+V  [jvm.dll+0x731b69]
+V  [jvm.dll+0x3e1bad]
+V  [jvm.dll+0x3e3e81]
+C  [javaw.exe+0x3617]
+C  [javaw.exe+0x17a6c]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000022e59e8b010, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000022e5b807800 GCTaskThread "GC Thread#0" [stack: 0x00000044ac700000,0x00000044ac800000] [id=4144]
+  0x0000022e5b824000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000044ac800000,0x00000044ac900000] [id=15096]
+  0x0000022e5b82a000 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000044ac900000,0x00000044aca00000] [id=8612]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff80d94f5b7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000022e5b7ee5e0] Heap_lock - owner thread: 0x0000022e5b7f0800
+
+Heap address: 0x00000000c2a00000, size: 982 MB, Compressed Oops mode: Non-zero based: 0x00000000c2a00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7e4a50000 - 0x00007ff7e4a95000 	C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\javaw.exe
+0x00007ff858690000 - 0x00007ff858888000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff829ff0000 - 0x00007ff82a007000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007ff857570000 - 0x00007ff85762d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff855e40000 - 0x00007ff85610e000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff857630000 - 0x00007ff8577d0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff856580000 - 0x00007ff8565a2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8583e0000 - 0x00007ff85840a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff856370000 - 0x00007ff85647b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8565e0000 - 0x00007ff85667d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff856270000 - 0x00007ff856370000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff83fc10000 - 0x00007ff83feaa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff856700000 - 0x00007ff85679e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff857540000 - 0x00007ff857570000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8519a0000 - 0x00007ff8519b6000 	C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\vcruntime140.dll
+0x00007ff81e5b0000 - 0x00007ff81e65a000 	C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\msvcp140.dll
+0x00007ff80d650000 - 0x00007ff80e173000 	C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\server\jvm.dll
+0x00007ff8585a0000 - 0x00007ff85864e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8574a0000 - 0x00007ff85753c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff857860000 - 0x00007ff857985000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8566f0000 - 0x00007ff8566f8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff83c090000 - 0x00007ff83c099000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff857430000 - 0x00007ff85749b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff836a60000 - 0x00007ff836a87000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff84f2e0000 - 0x00007ff84f2ea000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff854680000 - 0x00007ff854692000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff849a20000 - 0x00007ff849a31000 	C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\verify.dll
+0x00007ff853bb0000 - 0x00007ff853d94000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff83e0b0000 - 0x00007ff83e0dc000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff855db0000 - 0x00007ff855e32000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff8497c0000 - 0x00007ff8497e8000 	C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\java.dll
+0x00007ff8497a0000 - 0x00007ff8497b6000 	C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\zip.dll
+0x00007ff84dd60000 - 0x00007ff84dd6a000 	C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\Monserrat\Documents\openxava-6.6.3\studio\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: _run._Run_facturacion
+java_class_path (initial): C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\facturacion\web\WEB-INF\classes;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\commons-fileupload.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\itext.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\lib\portlet-api-1.0.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\dom4j.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\commons-collections.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\jasperreports.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\antlr.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\javassist.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\commons-validator.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\mailapi.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\lib\htmlunit.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\commons-io.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\ox-jdbc-adapters.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\lib\htmlunit-core-js.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\commons-logging.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\dwr.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\lib\junit.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\javax.inject.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\web\WEB-INF\lib\commons-beanutils.jar;C:\Users\Monserrat\Documents\openxava-6.6.3\workspace\OpenXava\lib\portal-kernel.jar;C:\Users\Monserrat\Documents\openxava
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 65011712                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1029701632                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5824844                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916698                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916698                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Users/Monserrat/Documents/openxava-6.6.3//studio/jre/bin/server;C:/Users/Monserrat/Documents/openxava-6.6.3//studio/jre/bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\TXE Components\iCLS\;C:\Program Files\Intel\TXE Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\TXE Components\DAL\;C:\Program Files (x86)\Intel\TXE Components\DAL\;C:\Program Files\Intel\TXE Components\IPT\;C:\Program Files (x86)\Intel\TXE Components\IPT\;C:\Users\Monserrat\AppData\Local\Microsoft\WindowsApps;C:\Users\Monserrat\AppData\Local\GitHubDesktop\bin;C:\Users\Monserrat\Documents\openxava-6.6.3;
+USERNAME=Monserrat
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 122 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 122 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, aes, clmul, erms, 3dnowpref, tsc, tscinvbit, sha
+
+Memory: 4k page, system-wide physical 3927M (422M free)
+TotalPageFile size 5313M (AvailPageFile size 24M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 47M, peak: 109M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.2+9) for windows-amd64 JRE (11.0.2+9), built on Jan 18 2019 05:23:22 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.

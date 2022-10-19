@@ -19,5 +19,5 @@ public class Direccion {
 	@Column(length=30)
 	String provincia;
 	
-
+	
 }

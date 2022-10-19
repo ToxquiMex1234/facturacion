@@ -1,24 +1,23 @@
 package com.tuempresa.facturacion.modelo;
 
-import javax.persistence.*;
-import javax.persistence.Entity;
+import java.util.*;
 
-import org.hibernate.annotations.*;
+import javax.persistence.*;
+
 import org.openxava.annotations.*;
 
 import lombok.*;
 
-@Entity @Getter @Setter
-public class Autor {
+@Entity
+@Getter @Setter
+public class Autor extends Identificable{
+
 	
-	@Id @GeneratedValue(generator="system-uuid")
-    @Hidden
-    @GenericGenerator(name="system-uuid", strategy="uuid")
-    @Column(length=32)
-	String oid;
 	
 	@Column(length=50)
 	String nombre;
 	
-	//leccion 5
+	@OneToMany(mappedBy="autor")
+	@ListProperties("numero, descripcion, precio")
+	Collection<Producto> productos;
 }

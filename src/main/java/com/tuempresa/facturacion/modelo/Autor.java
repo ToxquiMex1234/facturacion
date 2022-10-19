@@ -19,4 +19,5 @@ public class Autor extends Identificable{
 	@ListProperties("numero, descripcion, precio")
 	Collection<Producto> poductos;
 
+	
 }

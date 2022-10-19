@@ -11,3 +11,4 @@ public class Categoria extends Identificable{
 	String descripcion;
 
 }
+
