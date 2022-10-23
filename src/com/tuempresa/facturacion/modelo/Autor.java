@@ -11,7 +11,6 @@ import lombok.*;
 @Entity
 @Getter @Setter
 public class Autor extends Identificable{
-
 	
 	
 	@Column(length=50)
